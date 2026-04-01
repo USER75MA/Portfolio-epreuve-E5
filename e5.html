@@ -3,199 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Épreuve E5 – Mehdi Trabelsi BTS SIO SISR</title>
+<title>Portfolio E5 – BTS SIO SISR</title>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --navy:#0f1b2d; --blue:#1a56db; --blue-l:#e8f0fe; --gray:#6b7280;
-  --light:#f8f9fb; --white:#ffffff; --border:#e5e7eb; --text:#1c2333;
-  --radius:10px; --green:#059669; --green-l:#d1fae5;
-}
-body { font-family:'DM Sans',sans-serif; background:var(--light); color:var(--text); }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    background: #f8f9fb;
+    color: #1c2333;
+  }
 
-nav {
-  background:var(--navy);
-  padding:1rem 2rem;
-  display:flex;
-  justify-content:space-between;
-  color:white;
-}
+  nav {
+    background: #0f1b2d;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 0.9rem;
+  }
 
-.wrapper { max-width:900px; margin:auto; padding:2rem; }
+  .hero {
+    background: #0f1b2d;
+    color: white;
+    padding: 5rem 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
 
-h1 { color:white; }
-h2 { margin-top:2rem; color:var(--navy); }
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
 
-.hero { background:var(--navy); padding:3rem; border-radius:10px; margin-bottom:2rem; }
-.hero p { color:#94a3b8; }
+  .hero p {
+    color: #94a3b8;
+    max-width: 600px;
+  }
 
-section { margin-top:2rem; }
+  .section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
 
-.checklist { margin-top:1rem; }
-.check-item { background:white; padding:1rem; border-radius:10px; margin-bottom:0.5rem; border:1px solid var(--border); }
+  h2 {
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
 
-table { width:100%; border-collapse:collapse; margin-top:1rem; background:white; }
-th, td { padding:0.6rem; border:1px solid var(--border); text-align:center; }
-th { background:var(--navy); color:white; }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
 
-.links-list { list-style:none; margin-top:1rem; }
-.links-list li { margin-bottom:0.5rem; }
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+  }
 
-footer { background:var(--navy); color:#94a3b8; text-align:center; padding:1rem; margin-top:3rem; }
+  .card h3 {
+    margin-top: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: #1a56db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .skill {
+    background: white;
+    padding: 0.8rem;
+    border-left: 4px solid #1a56db;
+    border-radius: 6px;
+  }
+
+  footer {
+    background: #0f1b2d;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+
+  @media(max-width:700px){
+    .cards{
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
-</head>
 
+</head>
 <body>
 
 <nav>
-<a href="index.html" style="color:white;text-decoration:none;">← Retour portfolio</a>
+  Portfolio E5 – BTS SIO SISR
 </nav>
 
-<div class="wrapper">
-
+<!-- HERO -->
 <div class="hero">
-<h1>Épreuve E5</h1>
-<p>
-Cette page présente mon dossier pour l’épreuve E5 du BTS SIO SISR.
-Elle regroupe mon portfolio, mes réalisations professionnelles, mon tableau de synthèse
-ainsi que les éléments nécessaires à l’évaluation de mes compétences.
-</p>
+  <h1>Portfolio professionnel</h1>
+  <p>
+    Ce portfolio présente les compétences et réalisations effectuées dans le cadre du BTS SIO SISR.
+    Il met en évidence la mise en place d’infrastructures réseau, la gestion de services informatiques
+    et la résolution d’incidents.
+  </p>
 </div>
 
-<!-- DOSSIER -->
-<section>
-<h2>Dossier numérique</h2>
-
-<div class="checklist">
-
-<div class="check-item">
-Portfolio de professionnalisation — <a href="index.html">Accéder</a>
+<!-- PRESENTATION -->
+<div class="section">
+  <h2>Présentation</h2>
+  <p>
+    Étudiant en BTS SIO option SISR, je me forme à l’administration des systèmes et réseaux.
+    Au cours de ma formation, j’ai réalisé plusieurs ateliers me permettant de développer
+    des compétences en déploiement d’infrastructure, gestion de parc informatique et cybersécurité.
+  </p>
 </div>
 
-<div class="check-item">
-Tableau de synthèse — <a href="tableau-synthese-e5.xlsx">Télécharger</a>
+<!-- PROJETS -->
+<div class="section">
+  <h2>Projets réalisés</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Atelier 1 – Réseau</h3>
+      <p>Conception d’une infrastructure réseau avec segmentation et adressage IP.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atelier 2 – Active Directory</h3>
+      <p>Mise en place d’un domaine, gestion des utilisateurs et des stratégies de groupe.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atelier 3 – Services</h3>
+      <p>Déploiement de services réseau et gestion des accès utilisateurs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atelier 4 – GLPI & HAProxy</h3>
+      <p>Gestion de parc informatique, incidents et haute disponibilité.</p>
+      <a href="atelier4.html" class="btn">Voir le projet</a>
+    </div>
+
+  </div>
 </div>
 
-<div class="check-item">
-Attestations de stage (SESAN / Assurance Maladie)
+<!-- COMPETENCES -->
+<div class="section">
+  <h2>Compétences développées</h2>
+
+  <div class="skills">
+
+    <div class="skill">B1.1 – Gestion du parc informatique</div>
+    <div class="skill">B1.2 – Gestion des incidents</div>
+    <div class="skill">B2.2 – Déploiement d’infrastructure</div>
+    <div class="skill">B2.3 – Supervision et dépannage</div>
+    <div class="skill">B3.4 – Haute disponibilité</div>
+    <div class="skill">B3.5 – Cybersécurité</div>
+
+  </div>
 </div>
-
-</div>
-
-<p>
-Les réalisations présentées couvrent les compétences du bloc 1
-« Support et mise à disposition de services informatiques »,
-à travers des ateliers de professionnalisation et des stages en entreprise.
-</p>
-
-</section>
-
-<!-- SYNTHÈSE -->
-<section>
-<h2>Tableau de synthèse</h2>
-
-<table>
-<tr>
-<th>Réalisation</th>
-<th>B1.1</th>
-<th>B1.2</th>
-<th>B1.5</th>
-</tr>
-
-<tr>
-<td><a href="atelier2.html">Atelier 2</a></td>
-<td>✔</td><td>✔</td><td></td>
-</tr>
-
-<tr>
-<td><a href="atelier4.html">Atelier 4</a></td>
-<td>✔</td><td>✔</td><td>✔</td>
-</tr>
-
-<tr>
-<td><a href="stage1.html">Stage 1</a></td>
-<td>✔</td><td>✔</td><td>✔</td>
-</tr>
-
-<tr>
-<td><a href="stage2.html">Stage 2</a></td>
-<td>✔</td><td>✔</td><td>✔</td>
-</tr>
-
-</table>
-
-</section>
-
-<!-- EPREUVE -->
-<section>
-<h2>Organisation de l’épreuve</h2>
-
-<p>
-L’épreuve E5 se déroule en deux parties :
-</p>
-
-<ul>
-<li>Présentation du parcours de professionnalisation (10 minutes)</li>
-<li>Entretien avec le jury (30 minutes)</li>
-</ul>
-
-</section>
-
-<!-- VIDEO -->
-<section>
-<h2>Vidéo de présentation</h2>
-
-<p>
-La vidéo présente mon parcours, mes projets (ateliers et stages),
-ainsi que les compétences acquises dans le domaine des systèmes et réseaux.
-</p>
-
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; margin-top:1rem;">
-  <iframe
-    src="https://www.youtube.com/embed/SGogW9vFrEw"
-    frameborder="0"
-    allowfullscreen
-    style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:10px;">
-  </iframe>
-</div>
-
-</section>
-
-<!-- RESSOURCES -->
-<section>
-<h2>Ressources</h2>
-
-<ul class="links-list">
-<li><a href="index.html">Portfolio complet</a></li>
-<li><a href="tableau-synthese-e5.xlsx">Tableau de synthèse</a></li>
-<li><a href="https://github.com/USER75MA" target="_blank">GitHub</a></li>
-<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
-</ul>
-
-</section>
 
 <!-- CONCLUSION -->
-<section>
-<h2>Conclusion</h2>
-
-<p>
-Ce portfolio présente l’ensemble de mon parcours de professionnalisation
-ainsi que les compétences acquises dans le domaine des systèmes et réseaux.
-</p>
-
-<p>
-Les projets réalisés illustrent ma capacité à mettre en place,
-administrer et sécuriser des services informatiques dans un environnement professionnel.
-</p>
-
-</section>
-
+<div class="section">
+  <h2>Conclusion</h2>
+  <p>
+    Ces projets m’ont permis d’acquérir des compétences techniques solides en administration système et réseau.
+    Je suis capable de concevoir, déployer et maintenir une infrastructure tout en assurant sa sécurité et sa disponibilité.
+  </p>
 </div>
 
 <footer>
-Portfolio BTS SIO SISR – Mehdi Trabelsi
+  BTS SIO SISR – Portfolio E5 – 2026
 </footer>
 
 </body>
