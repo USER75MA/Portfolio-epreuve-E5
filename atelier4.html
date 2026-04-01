@@ -1,133 +1,210 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio – Atelier 4 PARCINFO</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* (STYLE IDENTIQUE AU TIEN — je ne change rien ici pour garder ton design) */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --navy:#0f1b2d; --blue:#1a56db; --blue-l:#e8f0fe; --gray:#6b7280; --light:#f8f9fb; --white:#fff; --border:#e5e7eb; --text:#1c2333; --radius:10px;}
-body { font-family:'DM Sans',sans-serif; background:var(--light); color:var(--text);}
-nav{background:var(--navy);padding:1rem 2rem;display:flex;justify-content:space-between;color:white;}
-.wrapper{max-width:860px;margin:auto;padding:2rem;}
-h2{margin-top:2rem;color:var(--navy);}
-p{color:#374151;}
-.mission{margin-bottom:1rem;}
-</style>
-</head>
-
-<body>
-
-<nav>
-PORTFOLIO / BTS SIO SISR
-</nav>
-
-<div class="wrapper">
-
-<h1>Atelier 4 – PARCINFO</h1>
-
 <!-- CONTEXTE -->
-<h2>Contexte</h2>
-<p>
-Dans le cadre de l’atelier 4, l’objectif était de mettre en place une solution de gestion de parc informatique
-et de gestion des incidents pour l’environnement TiersLieux.
-</p>
+<section id="contexte">
+  <div class="section-label">01 — Contexte</div>
+  <h2>Contexte et objectifs</h2>
 
-<p>
-L’infrastructure repose sur plusieurs serveurs distincts :
-</p>
+  <p>
+    TiersLieux86 est une association qui propose des espaces de travail partagés (ETP) pour des entreprises et des indépendants.
+    Chaque site dispose d’une infrastructure réseau complète avec des serveurs, un réseau local, un accès internet et des services mutualisés.
+  </p>
 
-<ul>
-<li>Serveurs GLPI (application)</li>
-<li>Serveur MariaDB (base de données)</li>
-<li>Serveur HAProxy (répartition de charge)</li>
-</ul>
+  <p>
+    L’infrastructure repose sur plusieurs réseaux distincts :
+    un LAN utilisateurs (192.168.x.x), un réseau serveurs (10.x.x.x) et une DMZ pour les services accessibles depuis internet.
+    Elle inclut notamment un annuaire Active Directory, un serveur web et un serveur de gestion de parc informatique. :contentReference[oaicite:2]{index=2}
+  </p>
 
-<p>
-Cette architecture permet de séparer les rôles et d’améliorer la disponibilité du service.
-</p>
+  <p>
+    Dans ce contexte, l’objectif de l’atelier est de mettre en place une solution de gestion de parc informatique
+    permettant de suivre les équipements, gérer les incidents et assurer la continuité de service.
+  </p>
 
-<p>
-L’environnement s’inscrit dans une logique de réseau segmenté (LAN clients / LAN serveurs),
-permettant une meilleure organisation et sécurité.
-</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🖥️</div>
+      <h3>GLPI</h3>
+      <p>Gestion du parc informatique et des tickets d’incidents</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🗄️</div>
+      <h3>MariaDB</h3>
+      <p>Base de données contenant les informations GLPI</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>HAProxy</h3>
+      <p>Répartition de charge et haute disponibilité</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💻</div>
+      <h3>GLPI Agent</h3>
+      <p>Inventaire automatique des postes clients</p>
+    </div>
+  </div>
+</section>
 
 <!-- MISSIONS -->
-<h2>Missions réalisées</h2>
+<section id="missions">
+  <div class="section-label">02 — Missions</div>
+  <h2>Travaux réalisés</h2>
 
-<p><strong>1. Mise en place de GLPI</strong><br>
-Installation de GLPI avec base MariaDB.
-Le poste Win11-Client remonte correctement avec nom, OS, utilisateur et IP.
-</p>
+  <div class="missions">
 
-<p><strong>2. Gestion des tickets</strong><br>
-Création d’un ticket de test permettant de valider le système de gestion des incidents.
-</p>
+    <div class="mission">
+      <span class="mission-num">M1</span>
+      <div>
+        <h3>Installation de GLPI</h3>
+        <p>
+          Mise en place du serveur GLPI avec Apache, PHP et MariaDB.
+          Configuration de l’interface web et accès utilisateur.
+        </p>
+      </div>
+    </div>
 
-<p><strong>3. Déploiement agent GLPI</strong><br>
-Installation du service glpi-agent sur Windows.
-Communication validée avec le serveur GLPI.
-</p>
+    <div class="mission">
+      <span class="mission-num">M2</span>
+      <div>
+        <h3>Inventaire du parc</h3>
+        <p>
+          Déploiement du GLPI Agent sur un poste Windows 11 afin de remonter automatiquement
+          les informations matérielles et logicielles dans GLPI.
+        </p>
+      </div>
+    </div>
 
-<p><strong>4. Sauvegarde MariaDB</strong><br>
-Sauvegarde réalisée avec mysqldump générant un fichier SQL exploitable.
-</p>
+    <div class="mission">
+      <span class="mission-num">M3</span>
+      <div>
+        <h3>Gestion des incidents</h3>
+        <p>
+          Création et suivi de tickets dans GLPI pour simuler un environnement de support utilisateur.
+        </p>
+      </div>
+    </div>
 
-<p><strong>5. Haute disponibilité (HAProxy)</strong><br>
-Accès via http://10.2.0.5/glpi.<br>
-Test de panne : arrêt d’un serveur → service toujours accessible.
-</p>
+    <div class="mission">
+      <span class="mission-num">M4</span>
+      <div>
+        <h3>Sauvegarde de la base</h3>
+        <p>
+          Réalisation d’une sauvegarde de la base MariaDB avec mysqldump
+          afin de garantir la récupération des données en cas de panne.
+        </p>
+      </div>
+    </div>
 
-<!-- RESULTATS -->
-<h2>Résultats</h2>
+    <div class="mission">
+      <span class="mission-num">M5</span>
+      <div>
+        <h3>Haute disponibilité</h3>
+        <p>
+          Mise en place de HAProxy avec deux serveurs GLPI en backend.
+          Test de panne validant la continuité du service via une adresse unique.
+        </p>
+      </div>
+    </div>
 
-<p>
-L’infrastructure mise en place permet :
-</p>
+  </div>
+</section>
 
-<ul>
-<li>un inventaire automatique du parc informatique</li>
-<li>une gestion des incidents via GLPI</li>
-<li>une sauvegarde sécurisée des données</li>
-<li>une continuité de service grâce à HAProxy</li>
-</ul>
+<!-- DOCUMENTS -->
+<section id="documents">
+  <div class="section-label">03 — Documents</div>
+  <h2>Ressources</h2>
 
-<p>
-Le système reste fonctionnel même en cas de panne d’un serveur,
-ce qui valide la mise en place de la haute disponibilité.
-</p>
+  <ul class="links-list">
 
-<h2>Documents et ressources</h2>
+    <li>
+      <a href="Contexte-TiersLieux_86.pdf" target="_blank">
+        <span class="link-icon">📄</span>
+        <span>
+          <div>Contexte TiersLieux86</div>
+          <div class="link-desc">Présentation de l’infrastructure et des services</div>
+        </span>
+      </a>
+    </li>
 
-<ul>
-<li><a href="Contexte-TiersLieux_86.pdf" target="_blank">Contexte TiersLieux</a></li>
-<li><a href="Documentation chasseneuil.pdf" target="_blank">Documentation réseau</a></li>
-<li><a href="Atelier4_CompteRendu_Complet.pdf" target="_blank">Compte rendu complet</a></li>
-<li><a href="https://github.com/USER75MA/Atelier4-PARCINFO" target="_blank">GitHub du projet</a></li>
-</ul>
+    <li>
+      <a href="Documentation chasseneuil.pdf" target="_blank">
+        <span class="link-icon">📋</span>
+        <span>
+          <div>Documentation Chasseneuil</div>
+          <div class="link-desc">Architecture réseau et organisation du site</div>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="https://github.com/USER75MA/Atelier4-PARCINFO" target="_blank">
+        <span class="link-icon">💾</span>
+        <span>
+          <div>Dépôt GitHub</div>
+          <div class="link-desc">Configurations et documentation technique</div>
+        </span>
+      </a>
+    </li>
+
+  </ul>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <div class="section-label">04 — Compétences</div>
+  <h2>Compétences mobilisées</h2>
+
+  <div class="competences">
+
+    <div class="comp">
+      <span class="comp-code">B1.1</span>
+      <span class="comp-label">Gérer le patrimoine informatique</span>
+      <span class="comp-detail">Inventaire GLPI</span>
+    </div>
+
+    <div class="comp">
+      <span class="comp-code">B1.2</span>
+      <span class="comp-label">Répondre aux incidents</span>
+      <span class="comp-detail">Tickets GLPI</span>
+    </div>
+
+    <div class="comp">
+      <span class="comp-code">B2.2</span>
+      <span class="comp-label">Déployer une solution</span>
+      <span class="comp-detail">GLPI, MariaDB, HAProxy</span>
+    </div>
+
+    <div class="comp">
+      <span class="comp-code">B2.3</span>
+      <span class="comp-label">Superviser une infrastructure</span>
+      <span class="comp-detail">Tests et dépannage</span>
+    </div>
+
+    <div class="comp">
+      <span class="comp-code">B3.4</span>
+      <span class="comp-label">Assurer la disponibilité</span>
+      <span class="comp-detail">Haute disponibilité HAProxy</span>
+    </div>
+
+  </div>
+</section>
 
 <!-- DEMO -->
-<h2>Démonstration</h2>
+<section id="demo">
+  <div class="section-label">05 — Démonstration</div>
+  <h2>Vidéo</h2>
 
-<p>
-La vidéo présente :
-</p>
+  <p>
+    La démonstration présente :
+    l’accès à GLPI via HAProxy,
+    l’inventaire automatique,
+    la création de tickets
+    et le test de panne validant la haute disponibilité.
+  </p>
 
-<ul>
-<li>l’accès à GLPI via HAProxy</li>
-<li>l’inventaire du poste client</li>
-<li>la création d’un ticket</li>
-<li>le test de panne validant la haute disponibilité</li>
-</ul>
-
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/SGogW9vFrEw"
-frameborder="0" allowfullscreen>
-</iframe>
-
-</div>
-
-</body>
-</html>
+  <div class="video-placeholder">
+    <div class="play">▶</div>
+    <span>Ajoute ta vidéo ici</span>
+  </div>
+</section>
